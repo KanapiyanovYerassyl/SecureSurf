@@ -1,4 +1,11 @@
-# PhishGuard – Chrome Extension
+# PhishGuard – Chrome Extension(BETA)
+
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="./logo.png" alt="Logo" width="200" height="200">
+  </a>
+</div>
 
 Real-time phishing detection for emails and web browsing.
 
