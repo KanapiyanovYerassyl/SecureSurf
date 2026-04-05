@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhishGuard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">🛡</div>
+        <div class="header-text">
+            <h1>PhishGuard</h1>
+            <p>Phishing Detection</p>
+        </div>
+        <button class="scan-btn" id="scanBtn">Scan Page</button>
+    </div>
+
+    <div class="scan-line" id="scanLine"></div>
+
+    <div class="current-url" id="currentUrl">Loading...</div>
+
+    <div class="state-box" id="loadingState">
+        <div class="state-icon">🔍</div>
+        <div class="state-title">Scanning page...</div>
+        <div class="state-sub">Analyzing URLs and page content<br>for phishing signals</div>
+    </div>
+
+    <div class="state-box visible" id="idleState">
+        <div class="state-icon" style="animation:none">🛡️</div>
+        <div class="state-title">Ready to scan</div>
+        <div class="state-sub">Click "Scan Page" to analyze the<br>current page for phishing threats</div>
+    </div>
+
+    <div id="results-section">
+        <div class="risk-section">
+            <div class="gauge-wrap">
+                <svg viewBox="0 0 140 80" id="gaugeSvg">
+          <path d="M 10 75 A 60 60 0 0 1 130 75" fill="none" stroke="#1e2d45" stroke-width="12" stroke-linecap="round"/>
+          <path d="M 10 75 A 60 60 0 0 1 130 75" fill="none" stroke="#00e5a0" stroke-width="12"
+            stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="188.5"
+            id="gaugeArc" style="transition: stroke-dashoffset 1s ease, stroke 0.5s ease;"/>
+          <line x1="70" y1="75" x2="70" y2="25" stroke="#546e8a" stroke-width="2"
+            stroke-linecap="round" id="gaugeNeedle"
+            style="transform-origin: 70px 75px; transition: transform 1s ease;"/>
+          <circle cx="70" cy="75" r="5" fill="#1a2236" stroke="#546e8a" stroke-width="2"/>
+        </svg>
+            </div>
+            <div class="risk-label">
+                <div class="risk-level" id="riskLevel">SAFE</div>
+                <div class="risk-sub" id="riskSub">No threats detected</div>
+            </div>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-box">
+                <div class="val" id="totalLinks">0</div>
+                <div class="lbl">Links Found</div>
+            </div>
+            <div class="stat-box">
+                <div class="val medium" id="medCount">0</div>
+                <div class="lbl">Suspicious</div>
+            </div>
+            <div class="stat-box">
+                <div class="val high" id="highCount">0</div>
+                <div class="lbl">Dangerous</div>
+            </div>
+        </div>
+
+        <div class="section-header">Flagged URLs</div>
+        <div class="url-list" id="urlList">
+            <div style="text-align:center; padding: 16px; color: var(--muted); font-size: 12px;">
+                ✓ No suspicious links detected
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
