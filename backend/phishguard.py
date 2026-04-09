@@ -1,5 +1,5 @@
 """
-PhishGuard - Python Backend
+Python Backend
 Ported from background.js (Chrome extension service worker)
 
 Provides:
