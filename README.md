@@ -1,4 +1,4 @@
-# PhishGuard – Chrome Extension(BETA)
+# SecureSurf – Chrome Extension(BETA)
 
 <br />
 <div align="center">
@@ -14,7 +14,7 @@ Real-time phishing detection for emails and web browsing.
 ##  Project Structure
 
 ```
-phishguard/
+SecureSurf/
 ├── manifest.json          # Extension config (Manifest v3)
 ├── popup.html (WIP)           # Extension popup UI
 ├── icons/                 # Extension icons 
