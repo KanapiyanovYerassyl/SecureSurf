@@ -4,11 +4,11 @@ README quality is good, it explains project structure, what will change. Also ex
 
 ## Folder Structure
 
-Folder structure is fine, all files are generalized
+Folder structure is fine, all files are generalized.
 
 ## File Naming Consistency
 
-Files named according to their functions
+Files named according to their functions.
 
 ## Presence of Essential Files
 
